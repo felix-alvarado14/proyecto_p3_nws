@@ -9,6 +9,7 @@
                 <th>Genre</th>
                 <th>Published Date</th>
                 <th>Publisher</th>
+                <th>Price</th>
                 <th>
                     <a href="index.php?page=Maintenance-Books-Book&mode=INS&id=" class="">New</a>
                 </th>
@@ -23,6 +24,7 @@
                 <td>{{genero}}</td>
                 <td>{{publicacion_year}}</td>
                 <td>{{editora}}</td>
+                <td>{{precio}}</td>
                 <td>
                     <a href="index.php?page=Maintenance-Books-Book&mode=UPD&id_libro={{id_libro}}" >
                         Editar

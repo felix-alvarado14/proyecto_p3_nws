@@ -25,6 +25,7 @@ class Book extends PrivateController
             "genero" => "",
             "publicacion_year" => 0,
             "editora" => "",
+            "precio" => 0,
             "modeDsc" => "",
             "errors" => [],
             "cancelLabel" => "Cancel",
@@ -114,6 +115,7 @@ class Book extends PrivateController
             $this->viewData["genero"] = $tmpLibro["genero"];
             $this->viewData["publicacion_year"] = $tmpLibro["publicacion_year"];
             $this->viewData["editora"] = $tmpLibro["editora"];
+            $this->viewData["precio"] = $tmpLibro["precio"];
         } else {
             $this->throwError(
                 "Something went wrong, try again.",
@@ -160,6 +162,12 @@ class Book extends PrivateController
                 "Trying to post without parameter EDITORA on body"
             );
         }
+        if (!isset($_POST["precio"])) {
+            $this->throwError(
+                "Something went wrong, try again.",
+                "Trying to post without parameter PRECIO on body"
+            );
+        }
         if (!isset($_POST["xsrtoken"])) {
             $this->throwError(
                 "Something went wrong, try again.",
@@ -184,6 +192,7 @@ class Book extends PrivateController
         $this->viewData["genero"] = $_POST["genero"];
         $this->viewData["publicacion_year"] = intval($_POST["publicacion_year"]);
         $this->viewData["editora"] = $_POST["editora"];
+        $this->viewData["precio"] = $_POST["precio"];
     }
 
     private function validateData(): bool
@@ -218,6 +227,12 @@ class Book extends PrivateController
         if (strlen($this->viewData["editora"]) > 50) {
             $this->innerError("editora", "Value is too long. Maximun allowed 100 character.");
         }
+        if (Validators::IsEmpty($this->viewData["precio"])) {
+            $this->innerError("precio", "This field is required.");
+        }
+        if ($this->viewData["precio"] < 0) {
+            $this->innerError("precio", "This field should be positive.");
+        }
 
         return !(count($this->viewData["errors"]) > 0);
     }
@@ -232,7 +247,8 @@ class Book extends PrivateController
                     $this->viewData["autor"],
                     $this->viewData["genero"],
                     $this->viewData["publicacion_year"],
-                    $this->viewData["editora"]
+                    $this->viewData["editora"],
+                    $this->viewData["precio"]
                 ) > 0) {
                     Site::redirectToWithMsg(LIST_URL, "Book created successfuly");
                 } else {
@@ -246,7 +262,8 @@ class Book extends PrivateController
                     $this->viewData["autor"],
                     $this->viewData["genero"],
                     $this->viewData["publicacion_year"],
-                    $this->viewData["editora"]
+                    $this->viewData["editora"],
+                    $this->viewData["precio"]
                 ) > 0) {
                     Site::redirectToWithMsg(LIST_URL, "Book updated successfuly");
                 } else {

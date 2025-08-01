@@ -22,24 +22,9 @@ class Books extends Table
         return self::obtenerUnRegistro($sqlstr, ["idLibro" => $id]);
     }
 
-    public static function newbook(string $titulo, string $autor, string $genero, int $ano, string $editora)
+    public static function newbook(string $titulo, string $autor, string $genero, int $ano, string $editora, float $precio)
     {
-        $sqlstr = "INSERT INTO libros (titulo, autor, genero, publicacion_year, editora) values (:titulo, :autor, :genero, :ano, :editora);";
-        return self::executeNonQuery(
-            $sqlstr,
-            [
-                "titulo" => $titulo,
-                "autor" => $autor,
-                "genero" => $genero,
-                "ano" => $ano,
-                "editora" => $editora
-            ]
-        );
-    }
-
-    public static function updateBook(int $id, string $titulo, string $autor, string $genero, string $ano, string $editora)
-    {
-        $sqlstr = "UPDATE libros set titulo = :titulo, autor = :autor, genero = :genero, publicacion_year = :ano, editora = :editora where id_libro = :id;";
+        $sqlstr = "INSERT INTO libros (titulo, autor, genero, publicacion_year, editora, precio) values (:titulo, :autor, :genero, :ano, :editora, :precio);";
         return self::executeNonQuery(
             $sqlstr,
             [
@@ -48,6 +33,23 @@ class Books extends Table
                 "genero" => $genero,
                 "ano" => $ano,
                 "editora" => $editora,
+                "precio" => $precio
+            ]
+        );
+    }
+
+    public static function updateBook(int $id, string $titulo, string $autor, string $genero, string $ano, string $editora, float $precio)
+    {
+        $sqlstr = "UPDATE libros set titulo = :titulo, autor = :autor, genero = :genero, publicacion_year = :ano, editora = :editora, precio = :precio where id_libro = :id;";
+        return self::executeNonQuery(
+            $sqlstr,
+            [
+                "titulo" => $titulo,
+                "autor" => $autor,
+                "genero" => $genero,
+                "ano" => $ano,
+                "editora" => $editora,
+                "precio" => $precio,
                 "id" => $id
             ]
         );

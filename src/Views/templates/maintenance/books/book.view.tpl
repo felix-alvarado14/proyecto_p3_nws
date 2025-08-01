@@ -92,6 +92,21 @@
                 <div class="error col-12">{{this}}</div>
              {{endfor errors_editora}}
         </div>
+        <div class="row my-2">
+            <label for="precio" class="col-12 col-m-4 col-l-3">Price:</label>
+            <input 
+                type="text"
+                name="precio"
+                id="precio"
+                value="{{precio}}"
+                placeholder="Price"
+                class="col-12 col-m-8 col-l-9"
+                {{readonly}}
+             />
+             {{foreach errors_editora}}
+                <div class="error col-12">{{this}}</div>
+             {{endfor errors_editora}}
+        </div>
         <div class="row">
             <div class="col-12 right">
                 <button class="" id="btnCancel" type="button">{{cancelLabel}}</button>
