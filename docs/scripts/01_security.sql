@@ -74,3 +74,58 @@ CREATE TABLE
         `bitusuario` bigint(18) DEFAULT NULL,
         PRIMARY KEY (`bitacoracod`)
     ) ENGINE = InnoDB AUTO_INCREMENT = 10 DEFAULT CHARSET = utf8;
+
+    INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES
+('Controllers\\Indexadmin', 'Panel Admin', 'ACT', 'ADM'),
+('Controllers\\Checkout\\Catalogo', 'Catálogo de Checkout', 'ACT', 'ADM'),
+('Controllers\\Maintenance\\Admin\\Books\\Book', 'Mantenimiento Libros (1)', 'ACT', 'ADM'),
+('Controllers\\Maintenance\\Admin\\Books\\Books', 'Mantenimiento Libros (2)', 'ACT', 'ADM'),
+('Controllers\\Maintenance\\Admin\\RolUsuario\\Rolusuario', 'Asignación de Roles a Usuarios', 'ACT', 'ADM'),
+('Controllers\\Maintenance\\Admin\\Roles\\Roles', 'Gestión de Roles', 'ACT', 'ADM'),
+('Controllers\\Maintenance\\Admin\\Usuarios\\Usuario', 'Mantenimiento de Usuario (1)', 'ACT', 'ADM'),
+('Controllers\\Maintenance\\Admin\\Usuarios\\Usuarios', 'Gestión de Usuarios', 'ACT', 'ADM');
+
+INSERT INTO funciones_roles (rolescod, fncod, fnrolest) VALUES
+('admin', 'Controllers\\Indexadmin', 'ACT'),
+('admin', 'Controllers\\Checkout\\Catalogo', 'ACT'),
+('admin', 'Controllers\\Maintenance\\Admin\\Books\\Book', 'ACT'),
+('admin', 'Controllers\\Maintenance\\Admin\\Books\\Books', 'ACT'),
+('admin', 'Controllers\\Maintenance\\Admin\\RolUsuario\\Rolusuario', 'ACT'),
+('admin', 'Controllers\\Maintenance\\Admin\\Roles\\Roles', 'ACT'),
+('admin', 'Controllers\\Maintenance\\Admin\\Usuarios\\Usuario', 'ACT'),
+('admin', 'Controllers\\Maintenance\\Admin\\Usuarios\\Usuarios', 'ACT');
+
+-- Usuario administrador
+INSERT INTO usuario (
+    useremail, username, userpswd, userfching, userpswdest,
+    userest, usertipo
+) VALUES (
+    'admin@example.com', 'Administrador', 'HASHED_ADMIN_PASSWORD', NOW(), 'ACT',
+    'ACT', 'ADM'
+);
+
+-- Usuario cliente
+INSERT INTO usuario (
+    useremail, username, userpswd, userfching, userpswdest,
+    userest, usertipo
+) VALUES (
+    'cliente@example.com', 'Cliente', 'HASHED_CLIENTE_PASSWORD', NOW(), 'ACT',
+    'ACT', 'CLI'
+);
+
+-- Crear rol admin si no existe
+INSERT IGNORE INTO roles (rolescod, rolesdsc, rolesest)
+VALUES ('admin', 'Administrador del sistema', 'ACT');
+
+-- Crear rol cliente si no existe
+INSERT IGNORE INTO roles (rolescod, rolesdsc, rolesest)
+VALUES ('cliente', 'Usuario Cliente', 'ACT');
+
+-- Asignar rol admin al usuario admin (ajusta usercod si necesario)
+INSERT INTO roles_usuarios (usercod, rolescod, roleuserest, roleuserfch)
+VALUES (1, 'admin', 'ACT', NOW());
+
+-- Asignar rol cliente al usuario cliente (ajusta usercod si necesario)
+INSERT INTO roles_usuarios (usercod, rolescod, roleuserest, roleuserfch)
+VALUES (2, 'cliente', 'ACT', NOW());
+
