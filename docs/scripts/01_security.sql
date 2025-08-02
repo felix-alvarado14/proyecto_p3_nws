@@ -95,7 +95,7 @@ INSERT INTO funciones_roles (rolescod, fncod, fnrolest) VALUES
 ('admin', 'Controllers\\Maintenance\\Admin\\Usuarios\\Usuario', 'ACT'),
 ('admin', 'Controllers\\Maintenance\\Admin\\Usuarios\\Usuarios', 'ACT');
 
--- Usuario administrador
+
 INSERT INTO usuario (
     useremail, username, userpswd, userfching, userpswdest,
     userest, usertipo
@@ -104,7 +104,7 @@ INSERT INTO usuario (
     'ACT', 'ADM'
 );
 
--- Usuario cliente
+
 INSERT INTO usuario (
     useremail, username, userpswd, userfching, userpswdest,
     userest, usertipo
@@ -113,19 +113,17 @@ INSERT INTO usuario (
     'ACT', 'CLI'
 );
 
--- Crear rol admin si no existe
+
 INSERT IGNORE INTO roles (rolescod, rolesdsc, rolesest)
 VALUES ('admin', 'Administrador del sistema', 'ACT');
 
--- Crear rol cliente si no existe
 INSERT IGNORE INTO roles (rolescod, rolesdsc, rolesest)
 VALUES ('cliente', 'Usuario Cliente', 'ACT');
 
--- Asignar rol admin al usuario admin (ajusta usercod si necesario)
 INSERT INTO roles_usuarios (usercod, rolescod, roleuserest, roleuserfch)
 VALUES (1, 'admin', 'ACT', NOW());
 
--- Asignar rol cliente al usuario cliente (ajusta usercod si necesario)
+
 INSERT INTO roles_usuarios (usercod, rolescod, roleuserest, roleuserfch)
 VALUES (2, 'cliente', 'ACT', NOW());
 
