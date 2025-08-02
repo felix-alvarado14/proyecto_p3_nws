@@ -12,7 +12,7 @@ class HomeController extends PublicController
   {
         Site::addLink("public/css/landing.css");
         $viewData = array();
-        \Views\Renderer::render("indexadmin", $viewData);
+        \Views\Renderer::render("index", $viewData);
   }
 }
 ?>

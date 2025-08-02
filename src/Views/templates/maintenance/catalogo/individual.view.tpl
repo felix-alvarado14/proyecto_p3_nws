@@ -78,11 +78,11 @@
 
     <h2>Desea Agregar al Carrito?</h2>
 
-    <form action="index.php?page=Maintenance-Catalogo-Individual&id_libro={{id_libro}}" method="POST">
-        <br>
-        <button class="" type="submit">Aceptar</button>
-        <button class="" id="btnCancel" type="button">Cancelar</button>
-    </form>
+<form method="POST" action="index.php?page=Maintenance-Cliente-Catalogo-AgregarTemp">
+    <input type="hidden" name="id_libro" value="{{id_libro}}">
+    <button type="submit">Aceptar</button>
+    <button id="btnCancel" type="button">Cancelar</button>
+</form>
 
 
 </section>
