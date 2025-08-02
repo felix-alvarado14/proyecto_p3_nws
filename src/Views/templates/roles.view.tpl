@@ -43,6 +43,10 @@
 
 <button id="btnRolesAsign">Ver Roles Asignados</button>
 
+<button id="btnFunciones">Ver Funciones</button>
+
+<button id="btnFuncionesAsign">Ver Funciones Asignadas</button>
+
 
 <script>
 
@@ -52,6 +56,24 @@
                 e.preventDefault();
                 e.stopPropagation();
                 window.location.assign("index.php?page=Maintenance-Admin-RolUsuario-Rolusuario");
+            });
+    });
+
+                        document.addEventListener("DOMContentLoaded", ()=>{
+        document.getElementById("btnFunciones")
+            .addEventListener("click", (e)=>{
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.assign("index.php?page=Maintenance-Admin-Funciones-Funciones");
+            });
+    });
+
+                            document.addEventListener("DOMContentLoaded", ()=>{
+        document.getElementById("btnFuncionesAsign")
+            .addEventListener("click", (e)=>{
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.assign("index.php?page=Maintenance-Admin-FuncionesRoles-FuncionesRoles");
             });
     });
     
