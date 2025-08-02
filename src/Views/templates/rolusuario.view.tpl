@@ -1,11 +1,13 @@
-<h1>Roles</h1>
+<h1>Roles para cada usuario</h1>
 <section class="WWList">
     <table>
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Descripcion</th>
+                <th>ID Usuario</th>
+                <th>ID Rol</th>
                 <th>Estado</th>
+                <th>Creación</th>
+                <th>Expiración</th>
 
                 <th>
                     <a href="index.php?page=Maintenance-Admin-Books-Book&mode=INS&id=" class="">New</a>
@@ -14,11 +16,13 @@
             </tr>
         </thead>
         <tbody>
-            {{foreach roles}}
+            {{foreach rolusuario}}
             <tr>
+                <td>{{usercod}}</td>
                 <td>{{rolescod}}</td>
-                <td>{{rolesdsc}}</td>
-                <td>{{rolesest}}</td>
+                <td>{{roleuserest}}</td>
+                <td>{{roleuserfch}}</td>
+                <td>{{roleuserexp}}</td>
                 <td>
                     <a href="index.php?page=Maintenance-Admin-Books-Book&mode=UPD&id_libro={{id_libro}}" >
                         Editar
@@ -31,7 +35,7 @@
                     </a>
                 </td>
             </tr>
-            {{endfor roles}}
+            {{endfor rolusuario}}
         </tbody>
     </table>
 
@@ -40,19 +44,3 @@
 </section>  
 
 <br>
-
-<button id="btnRolesAsign">Ver Roles Asignados</button>
-
-
-<script>
-
-                    document.addEventListener("DOMContentLoaded", ()=>{
-        document.getElementById("btnRolesAsign")
-            .addEventListener("click", (e)=>{
-                e.preventDefault();
-                e.stopPropagation();
-                window.location.assign("index.php?page=Maintenance-Admin-RolUsuario-Rolusuario");
-            });
-    });
-    
-    </script>

@@ -11,6 +11,7 @@
  */
 namespace Controllers;
 
+use Controllers\PrivateController;
 use Utilities\Site;
 
 /**
@@ -22,7 +23,7 @@ use Utilities\Site;
  * @license  MIT http://
  * @link     http://
  */
-class Indexadmin extends PublicController
+class Indexadmin extends PrivateController
 {
     /**
      * Index run method

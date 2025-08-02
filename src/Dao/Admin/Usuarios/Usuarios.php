@@ -1,6 +1,6 @@
 <?php
 
-namespace Dao\Usuarios;
+namespace Dao\Admin\Usuarios;
 
 use Dao\Table;
 

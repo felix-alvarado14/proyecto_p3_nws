@@ -1,6 +1,6 @@
 <?php
 
-namespace Dao\Catalogo;
+namespace Dao\Cliente\Catalogo;
 
 use Dao\Table;
 

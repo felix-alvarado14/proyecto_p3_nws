@@ -1,6 +1,6 @@
 <?php
 
-namespace Dao\Books;
+namespace Dao\Admin\Books;
 
 use Dao\Table;
 

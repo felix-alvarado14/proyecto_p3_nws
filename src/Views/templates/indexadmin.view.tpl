@@ -47,7 +47,7 @@
             .addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.assign("index.php?page=Maintenance-Usuarios-Usuarios");
+                window.location.assign("index.php?page=Maintenance-Admin-Usuarios-Usuarios");
             });
     });
 
@@ -56,7 +56,7 @@
             .addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.assign("index.php?page=Maintenance-Books-Books");
+                window.location.assign("index.php?page=Maintenance-Admin-Books-Books");
             });
     });
 
@@ -74,7 +74,7 @@
             .addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.assign("index.php?page=Maintenance-Roles-Roles");
+                window.location.assign("index.php?page=Maintenance-Admin-Roles-Roles");
             });
     });
 

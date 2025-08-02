@@ -1,9 +1,9 @@
 <?php
 
-namespace Controllers\Maintenance\Usuarios;
+namespace Controllers\Maintenance\Admin\Usuarios;
 
 use Controllers\PrivateController;
-use DAO\Usuarios\Usuarios as UsuariosDAO;
+use DAO\Admin\Usuarios\Usuarios as UsuariosDAO;
 use Views\Renderer;
 
 class Usuarios extends PrivateController{

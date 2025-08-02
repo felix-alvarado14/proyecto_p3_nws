@@ -18,6 +18,6 @@
 
 <script>
     function verDetalles(idLibro){
-        window.location.href = `index.php?page=Maintenance-Catalogo-Individual&id_libro=${idLibro}`;
+        window.location.href = `index.php?page=Maintenance-Cliente-Catalogo-Individual&id_libro=${idLibro}`;
     }
 </script>

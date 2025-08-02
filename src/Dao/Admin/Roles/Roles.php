@@ -1,6 +1,6 @@
 <?php
 
-namespace Dao\Roles;
+namespace Dao\Admin\Roles;
 
 use Dao\Table;
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace Controllers\Maintenance\Usuarios;
+namespace Controllers\Maintenance\Admin\Usuarios;
 
 use Controllers\PrivateController;
-use Dao\Usuarios\Usuarios as UsuariosDAO;
+use Dao\Admin\Usuarios\Usuarios as UsuariosDAO;
 use Views\Renderer;
 use Utilities\Site;
 use Utilities\Validators;
 
-const LIST_URL = "index.php?page=Maintenance-Usuarios-Usuarios";
+const LIST_URL = "index.php?page=Maintenance-Admin-Usuarios-Usuarios";
 
 class Usuario extends PrivateController
 {

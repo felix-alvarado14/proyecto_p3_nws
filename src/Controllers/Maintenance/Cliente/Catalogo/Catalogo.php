@@ -1,16 +1,16 @@
 <?php
 
-namespace Controllers\Maintenance\Catalogo;
+namespace Controllers\Maintenance\Cliente\Catalogo;
 
-use Controllers\PrivateController;
-use DAO\Catalogo\Catalogo as CatalogoDAO;
+use Controllers\PublicController;
+use DAO\Cliente\Catalogo\Catalogo as CatalogoDAO;
 use Views\Renderer;
 
 use Dao\Cart\Cart;
 
 use Utilities\Site;
 
-class Catalogo extends PrivateController{
+class Catalogo extends PublicController{
     private array $viewData;
 
     public function __construct(){

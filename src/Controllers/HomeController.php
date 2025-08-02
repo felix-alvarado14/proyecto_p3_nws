@@ -10,12 +10,9 @@ class HomeController extends PublicController
 {
   public function run(): void
   {
-    Site::addLink("public/css/products.css");
-    $viewData = [];
-    $viewData["productsOnSale"] = Books::getDailyDeals();
-    $viewData["productsHighlighted"] = Books::getFeaturedProducts();
-    $viewData["productsNew"] = Books::getNewProducts();
-    Renderer::render("home", $viewData);
+        Site::addLink("public/css/landing.css");
+        $viewData = array();
+        \Views\Renderer::render("indexadmin", $viewData);
   }
 }
 ?>

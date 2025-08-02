@@ -144,7 +144,7 @@
             .addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.assign("index.php?page=Maintenance-Usuarios-Usuarios");
+                window.location.assign("index.php?page=Maintenance-Admin-Usuarios-Usuarios");
             });
     });
 </script>

@@ -1,9 +1,9 @@
 <?php
 
-namespace Controllers\Maintenance\Roles;
+namespace Controllers\Maintenance\Admin\Roles;
 
 use Controllers\PrivateController;
-use DAO\Roles\Roles as RolesDAO;
+use DAO\Admin\Roles\Roles as RolesDAO;
 use Views\Renderer;
 
 class Roles extends PrivateController{

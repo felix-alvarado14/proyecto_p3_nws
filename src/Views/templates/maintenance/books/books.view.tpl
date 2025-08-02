@@ -26,13 +26,13 @@
                 <td>{{editora}}</td>
                 <td>{{precio}}</td>
                 <td>
-                    <a href="index.php?page=Maintenance-Books-Book&mode=UPD&id_libro={{id_libro}}" >
+                    <a href="index.php?page=Maintenance-Admin-Books-Book&mode=UPD&id_libro={{id_libro}}" >
                         Editar
                     </a> &nbsp;
-                    <a href="index.php?page=Maintenance-Books-Book&mode=DSP&id_libro={{id_libro}}" >
+                    <a href="index.php?page=Maintenance-Admin-Books-Book&mode=DSP&id_libro={{id_libro}}" >
                         Ver
                     </a> &nbsp;
-                    <a href="index.php?page=Maintenance-Books-Book&mode=DEL&id_libro={{id_libro}}" >
+                    <a href="index.php?page=Maintenance-Admin-Books-Book&mode=DEL&id_libro={{id_libro}}" >
                         Eliminar
                     </a>
                 </td>

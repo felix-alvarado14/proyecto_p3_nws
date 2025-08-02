@@ -1,9 +1,9 @@
 <?php
 
-namespace Controllers\Maintenance\Books;
+namespace Controllers\Maintenance\Admin\Books;
 
 use Controllers\PrivateController;
-use DAO\Books\Books as BooksDAO;
+use DAO\Admin\Books\Books as BooksDAO;
 use Views\Renderer;
 
 class Books extends PrivateController{

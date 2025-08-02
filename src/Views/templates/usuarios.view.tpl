@@ -15,7 +15,7 @@
                 <th>Ultimo Cambio Contraseña</th>
                 <th>Tipo de Usuario</th>
                 <th>
-                    <a href="index.php?page=Maintenance-Books-Book&mode=INS&id=" class="">New</a>
+                    <a href="index.php?page=Maintenance-Admin-Books-Book&mode=INS&id=" class="">New</a>
                 </th>
             </tr>
         </thead>
@@ -34,13 +34,13 @@
                 <td>{{userpswdchg}}</td>
                 <td>{{usertipo}}</td>
                 <td>
-                    <a href="index.php?page=Maintenance-Usuarios-Usuario&mode=UPD&usercod={{usercod}}" >
+                    <a href="index.php?page=Maintenance-Admin-Usuarios-Usuario&mode=UPD&usercod={{usercod}}" >
                         Editar
                     </a> &nbsp;
-                    <a href="index.php?page=Maintenance-Usuarios-Usuario&mode=DSP&usercod={{usercod}}" >
+                    <a href="index.php?page=Maintenance-Admin-Usuarios-Usuario&mode=DSP&usercod={{usercod}}" >
                         Ver
                     </a> &nbsp;
-                    <a href="index.php?page=Maintenance-Usuarios-Usuario&mode=DEL&usercod={{usercod}}" >
+                    <a href="index.php?page=Maintenance-Admin-Usuarios-Usuario&mode=DEL&usercod={{usercod}}" >
                         Eliminar
                     </a>
                 </td>

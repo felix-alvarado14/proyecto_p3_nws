@@ -11,11 +11,6 @@
       "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Crear Cuenta"
     },
     {
-      "id": "Menu_Books",
-      "nav_url": "index.php?page=Maintenance-Books-Books",
-      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Books"
-    },
-        {
       "id": "Menu_Catalogo",
       "nav_url": "index.php?page=Maintenance-Catalogo-Catalogo",
       "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Catalogo"
@@ -27,15 +22,20 @@
       "nav_url": "index.php?page=Checkout_Checkout",
       "nav_label": "Carretilla de Compra"
     },
-    {
+        {
       "id": "Menu_Books",
-      "nav_url": "index.php?page=Maintenance-Books-Books",
+      "nav_url": "index.php?page=Maintenance-Admin-Books-Books",
       "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Books"
     },
     {
-      "id": "Menu_Catalogo",
-      "nav_url": "index.php?page=Maintenance-Catalogo-Catalogo",
-      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Catalogo"
+      "id": "Menu_Usuarios",
+      "nav_url": "index.php?page=Maintenance-Admin-Usuarios-Usuarios",
+      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Usuarios"
+    },
+    {
+      "id": "Menu_Roles",
+      "nav_url": "index.php?page=Maintenance-Roles-Roles",
+      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Roles"
     }
   ]
 }

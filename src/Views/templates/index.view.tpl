@@ -47,7 +47,7 @@
             .addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.assign("index.php?page=Maintenance-Catalogo-Catalogo");
+                window.location.assign("index.php?page=Maintenance-Cliente-Catalogo-Catalogo");
             });
     });
 

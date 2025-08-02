@@ -1,15 +1,15 @@
 <?php
 
-namespace Controllers\Maintenance\Books;
+namespace Controllers\Maintenance\Admin\Books;
 
 use Controllers\PrivateController;
-use Dao\Books\Books as BooksDAO;
+use Dao\Admin\Books\Books as BooksDAO;
 use Views\Renderer;
 
 use Utilities\Site;
 use Utilities\Validators;
 
-const LIST_URL = "index.php?page=Maintenance-Books-Books";
+const LIST_URL = "index.php?page=Maintenance-Admin-Books-Books";
 
 class Book extends PrivateController
 {

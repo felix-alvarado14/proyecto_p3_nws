@@ -1,13 +1,13 @@
 <?php
 
-namespace Controllers\Maintenance\Catalogo;
+namespace Controllers\Maintenance\Cliente\Catalogo;
 
 use Controllers\PublicController;
-use Dao\Catalogo\Catalogo as CatalogoDAO;
+use Dao\Cliente\Catalogo\Catalogo as CatalogoDAO;
 use Views\Renderer;
 use Utilities\Site;
 
-const LIST_URL = "index.php?page=Maintenance-Catalogo-Catalogo";
+const LIST_URL = "index.php?page=Maintenance-Cliente-Catalogo-Catalogo";
 
 class Individual extends PublicController
 {
