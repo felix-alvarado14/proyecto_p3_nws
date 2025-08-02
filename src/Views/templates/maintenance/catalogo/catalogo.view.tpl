@@ -16,6 +16,12 @@
 
 </div>
 
+<div>
+    <form method="post" action="index.php?page=Checkout-Checkout">
+        <button type="submit">Checkout</button>
+    </form>
+</div>
+
 <script>
     function verDetalles(idLibro){
         window.location.href = `index.php?page=Maintenance-Cliente-Catalogo-Individual&id_libro=${idLibro}`;

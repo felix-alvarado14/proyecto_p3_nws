@@ -80,6 +80,8 @@
 
 <form method="POST" action="index.php?page=Maintenance-Cliente-Catalogo-AgregarTemp">
     <input type="hidden" name="id_libro" value="{{id_libro}}">
+    <input type="hidden" name="titulo" value="{{titulo}}">
+    <input type="hidden" name="precio" value="{{precio}}">
     <button type="submit">Aceptar</button>
     <button id="btnCancel" type="button">Cancelar</button>
 </form>

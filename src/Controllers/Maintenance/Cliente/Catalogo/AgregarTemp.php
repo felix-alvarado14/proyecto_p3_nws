@@ -13,9 +13,11 @@ class AgregarTemp extends PublicController
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $idLibro = $_POST["id_libro"] ?? null;
+            $titulo = $_POST["titulo"] ?? null;
+            $precio = floatval($_POST["precio"]) ?? null;
 
             if ($idLibro) {
-                TempLibros::insert($idLibro);
+                TempLibros::insert($idLibro, $titulo, $precio);
                 $this->viewData["mensaje"] = "Libro agregado correctamente al carrito.";
             } else {
                 $this->viewData["mensaje"] = "Error: ID de libro no válido.";

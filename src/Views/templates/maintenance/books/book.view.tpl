@@ -4,7 +4,7 @@
 <section class="depth-2 px-4 py-4 my-4 grid row">
    <form 
         method="POST"
-        action="index.php?page=Maintenance-Books-Book&mode={{mode}}&id_libro={{id_libro}}"
+        action="index.php?page=Maintenance-Admin-Books-Book&mode={{mode}}&id_libro={{id_libro}}"
         class="grid col-12 col-m-8 offset-m-2 col-l-6 offset-l-3"
     >
         <div class="row my-2">
@@ -133,7 +133,7 @@
             .addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.assign("index.php?page=Maintenance-Books-Books");
+                window.location.assign("index.php?page=Maintenance-Admin-Books-Books");
             });
     });
 </script>

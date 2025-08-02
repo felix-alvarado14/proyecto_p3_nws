@@ -11,7 +11,7 @@
                 <th>Publisher</th>
                 <th>Price</th>
                 <th>
-                    <a href="index.php?page=Maintenance-Books-Book&mode=INS&id=" class="">New</a>
+                    <a href="index.php?page=Maintenance-Admin-Books-Book&mode=INS&id=" class="">New</a>
                 </th>
             </tr>
         </thead>

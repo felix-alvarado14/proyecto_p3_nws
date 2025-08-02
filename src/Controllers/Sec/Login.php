@@ -60,7 +60,8 @@ class Login extends \Controllers\PublicController
                                 \Utilities\Context::getContextByKey("redirto")
                             );
                         } else {
-                            \Utilities\Site::redirectTo("index.php?page=Maintenance-Books-Books");
+                            $_SESSION["usercod"] = $dbUser["usercod"];
+                            \Utilities\Site::redirectTo("index.php?page=Maintenance-Admin-Books-Books");
                         }
                     }
                 } else {
