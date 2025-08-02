@@ -13,24 +13,34 @@ CREATE TABLE
 CREATE TABLE
     `carretilla` (
         `usercod` BIGINT(10) NOT NULL,
-        `productId` int(11) NOT NULL,
+        `id_libro` int(11) NOT NULL,
         `crrctd` INT(5) NOT NULL,
         `crrprc` DECIMAL(12, 2) NOT NULL,
         `crrfching` DATETIME NOT NULL,
-        PRIMARY KEY (`usercod`, `productId`),
-        INDEX `productId_idx` (`productId` ASC),
+        PRIMARY KEY (`usercod`, `id_libro`),
+        INDEX `id_libro_idx` (`id_libro` ASC),
         CONSTRAINT `carretilla_user_key` FOREIGN KEY (`usercod`) REFERENCES `usuario` (`usercod`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-        CONSTRAINT `carretilla_prd_key` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+        CONSTRAINT `carretilla_prd_key` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id_libro`) ON DELETE NO ACTION ON UPDATE NO ACTION
     );
 
-CREATE TABLE
-    `carretillaanon` (
-        `anoncod` varchar(128) NOT NULL,
-        `productId` bigint(18) NOT NULL,
-        `crrctd` int(5) NOT NULL,
-        `crrprc` decimal(12, 2) NOT NULL,
-        `crrfching` datetime NOT NULL,
-        PRIMARY KEY (`anoncod`, `productId`),
-        KEY `productId_idx` (`productId`),
-        CONSTRAINT `carretillaanon_prd_key` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`) ON DELETE NO ACTION ON UPDATE NO ACTION
-    );
+CREATE TABLE `carretillaanon` (
+    `anoncod` VARCHAR(128) NOT NULL,
+    `id_libro` BIGINT NOT NULL,
+    `crrctd` INT(5) NOT NULL,
+    `crrprc` DECIMAL(12, 2) NOT NULL,
+    `crrfching` DATETIME NOT NULL,
+    PRIMARY KEY (`anoncod`, `id_libro`),
+    KEY `id_libro_idx` (`id_libro`),
+    CONSTRAINT `carretillaanon_prd_key`
+        FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id_libro`)
+        ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+    DROP TABLE
+    `carretilla`
+
+        DROP TABLE
+    `products`
+
+    

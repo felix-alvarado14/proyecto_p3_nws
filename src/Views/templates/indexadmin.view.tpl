@@ -1,10 +1,9 @@
 <h1>{{SITE_TITLE}}</h1>
-<p>Landing Page Cliente</p>
+<p>Landing Page Administrador</p>
 
 <br>
 
 <h2 class="titulo">Paginas disponibles:</h2>
-
 
 <form 
         method="POST"
@@ -16,25 +15,26 @@
         <div class="column">
 
             <div class="opcion">
-                <button class="btnLanding" id="btnCatalogo" type="button">Catálogo</button>
+                <button class="btnLanding" id="btnUsuarios" type="button">Usuarios</button>
                 &nbsp;
            </div>
-
-           <br>
 
             <div class="opcion">
-                <button class="btnLanding" id="btnTransferencias" type="button">Historial Transferencias</button>
+                <button class="btnLanding" id="btnInventario" type="button">Inventario</button>
                 &nbsp;
            </div>
-
-           <br>
 
             <div class="opcion">
                 <button class="btnLanding" id="btnCarrito" type="button">Mi Carrito</button>
                 &nbsp;
             </div>
 
-        </div>
+             <div class="opcion">
+                <button class="btnLanding" id="btnRoles" type="button">Roles</button>
+                &nbsp;
+            </div>
+
+    </div>
 
     </section>
     
@@ -43,16 +43,16 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", ()=>{
-        document.getElementById("btnCatalogo")
+        document.getElementById("btnUsuarios")
             .addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
-                window.location.assign("index.php?page=Maintenance-Catalogo-Catalogo");
+                window.location.assign("index.php?page=Maintenance-Usuarios-Usuarios");
             });
     });
 
     document.addEventListener("DOMContentLoaded", ()=>{
-        document.getElementById("btnTransferencias")
+        document.getElementById("btnInventario")
             .addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
@@ -66,6 +66,15 @@
                 e.preventDefault();
                 e.stopPropagation();
                 window.location.assign("index.php?page=Maintenance-Books-Books");
+            });
+    });
+
+            document.addEventListener("DOMContentLoaded", ()=>{
+        document.getElementById("btnRoles")
+            .addEventListener("click", (e)=>{
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.assign("index.php?page=Maintenance-Roles-Roles");
             });
     });
 

@@ -94,6 +94,17 @@ class Cart extends \Dao\Table
         return $productosCurados;
     }
 
+    public static function addToAnonCart(
+        int $id_libro, string $anonCod, int $amount, float $price
+    ){
+
+        return self::executeNonQuery(
+            "INSERT INTO carretillaanon (anoncod, id_libro, crrctd, crrprc, crrfching) VALUES (:anoncod, :id_libro, :crrctd, :crrprc, NOW())",
+            ["anoncod" => $anoncod, "id_libro" => $id_libro, "crrctd" => $amount, "crrprc" => $price]
+        );
+
+    }
+
     public static function getProducto($productId)
     {
         $sqlAllProductosActivos = "SELECT * from products where productId=:productId;";

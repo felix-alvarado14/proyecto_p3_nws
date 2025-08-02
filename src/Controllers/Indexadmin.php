@@ -22,7 +22,7 @@ use Utilities\Site;
  * @license  MIT http://
  * @link     http://
  */
-class Index extends PublicController
+class Indexadmin extends PublicController
 {
     /**
      * Index run method
@@ -33,7 +33,7 @@ class Index extends PublicController
     {
         Site::addLink("public/css/landing.css");
         $viewData = array();
-        \Views\Renderer::render("index", $viewData);
+        \Views\Renderer::render("indexadmin", $viewData);
     }
 }
 ?>
